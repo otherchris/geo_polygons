@@ -14,7 +14,7 @@ defmodule Polygon do
     - Polygon is non-degenerate (three or more points)
   Returns false otherwise. (Not implemented)
   """
-  def valid_polygon(poly) do
+  def valid_polygon?(poly) do
   end
 
   @spec area_2d(polygon, atom) :: float
