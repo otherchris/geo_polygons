@@ -1,10 +1,11 @@
-defmodule Polygon do
+defmodule GeoPolygons.Polygon do
   @moduledoc """
   Polygon struct and operations on Polygons
   """
-  defstruct coordinates: []
 
-  @type polygon :: %Polygon{}
+  alias GeoPolygons.Point
+
+  @type polygon :: list(Point.point)
 
   @spec valid_polygon?(polygon) :: boolean
   @doc """
@@ -15,6 +16,7 @@ defmodule Polygon do
   Returns false otherwise. (Not implemented)
   """
   def valid_polygon?(poly) do
+    length(poly) > 2
   end
 
   @spec area_2d(polygon, atom) :: float

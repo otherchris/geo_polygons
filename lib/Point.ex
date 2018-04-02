@@ -1,10 +1,10 @@
-defmodule Point do
+defmodule GeoPolygons.Point do
   @moduledoc """
   Point struct and operations on Points
   """
   defstruct lat: 45.0, long: 90.0, alt: 0
 
-  @type point :: %Point{}
+  @type point :: %GeoPolygons.Point{}
 
   @spec dist_2d(point, point, :atom) :: float
   @doc """
